@@ -8,9 +8,10 @@ des = os.path.join('C:\\Users\\Gabriel\\Desktop\\teste-bkp')
 diasBkpsModerniza = 5
 diasBkpsGoogleDrive = 5
 diasBkpsCompactadosGoogleDrive = 5
+srcLojamix = os.path.join('C:\\Lojamix\\Backup')
 
 # Apaga BKPs antigos do diretório padrão moderniza
-os.system(f'forfiles -p "C:\\Lojamix\\Backup" -d -{diasBkpsModerniza} -c "cmd /c del /f /q @path"')
+os.system(f'forfiles -p "{srcLojamix}" -d -{diasBkpsModerniza} -c "cmd /c del /f /q @path"')
 time.sleep(2)
 
 # Apaga BKPs antigos com extensão ".bak" do google drive
@@ -24,11 +25,11 @@ time.sleep(2)
 # Compacta arquivos ".bak" para "backup.zip"
 filezip = zipfile.ZipFile('C:\\Lojamix\\Backup\\backup.zip', 'w')
 
-for folder, subfolders, files in os.walk('C:\\Lojamix\\Backup'):
+for folder, subfolders, files in os.walk(f'{srcLojamix}'):
 
     for file in files:
         if file.endswith('.bak'):
-            filezip.write(os.path.join(folder, file), os.path.relpath(os.path.join(folder, file), 'C:\\Lojamix\\Backup'), compress_type=zipfile.ZIP_DEFLATED)
+            filezip.write(os.path.join(folder, file), os.path.relpath(os.path.join(folder, file), f'{srcLojamix}'), compress_type=zipfile.ZIP_DEFLATED)
 
 filezip.close()
 
