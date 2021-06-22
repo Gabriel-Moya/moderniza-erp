@@ -23,7 +23,7 @@ os.system(f'forfiles -p "%HomePath%\\Google Drive\\bkp-sistema" /M *.zip -d -{di
 time.sleep(2)
 
 # Compacta arquivos ".bak" para "backup.zip"
-filezip = zipfile.ZipFile('C:\\Lojamix\\Backup\\backup.zip', 'w')
+filezip = zipfile.ZipFile(f'{srcLojamix}\\backup.zip', 'w')
 
 for folder, subfolders, files in os.walk(f'{srcLojamix}'):
 
