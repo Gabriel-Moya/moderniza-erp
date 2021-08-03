@@ -24,4 +24,4 @@ Realize todas as alterações que precisar no `main.py` e depois execute o `gera
 ------
 
 # Sincronização NF
-Query SQL para resolver problema de sincronização das NFC-e do PDV com o retaguarda, basta executar no banco e substituir os IDs para o ID da nota que deseja sincronizar, para usar mais de um separe-os por vírgula, lembrando que é possível copiar todos os IDs desejados diretamente do PDV selecionando através da coluna.
+Query SQL para resolver problema de sincronização das NFC-e do PDV com o retaguarda, basta executar no banco do PDV e substituir os IDs para o ID da nota que deseja sincronizar, para usar mais de um ID separe-os por vírgula, lembrando que é possível copiar todos os IDs desejados diretamente do PDV selecionando através da coluna.
