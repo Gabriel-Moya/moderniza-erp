@@ -22,3 +22,6 @@ Caso queira ignorar algum passo basta comentar a linha responsável com um "#" n
 
 ### Como executar
 Realize todas as alterações que precisar no `main.py` e depois execute o `gera-executavel.bat`, ele irá gerar um arquivo executável dentro da pasta `dist` que você pode iniciar junto com o sistema ou criar uma tarefa através do agendador de tarefas
+
+# Sincronização NF
+Query SQL para resolver problema de sincronização das NFC-e do PDV com o retaguarda, basta executar no banco e substituir os IDs para o ID da nota que deseja sincronizar, para usar mais de um separe-os por vírgula, lembrando que é possível copiar todos os IDs desejados diretamente do PDV selecionando através da coluna.

@@ -1,0 +1,1 @@
+update nfe set Lojamix_SitReplicacao = 1 where ide_numeronf in (551, 552)
