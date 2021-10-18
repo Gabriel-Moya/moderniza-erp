@@ -12,9 +12,7 @@ diasBkpsModerniza = 5
 dataAtual = datetime.date.today()
 
 # Apaga BKPs antigos do diretório padrão moderniza
-
-# Apaga BKPs antigos do diretório padrão moderniza
-subprocess.run(['forfiles', '-p', f'{srcLojamix}', '/M', '*.bak', '-d', f'-{diasBkpsModerniza}', '-c', 'cmd /c del /f /q @path'])
+subprocess.call(['forfiles', '-p', f'{srcLojamix}', '/M', '*.bak', '-d', f'-{diasBkpsModerniza}', '-c', 'cmd /c del /f /q @path'])
 time.sleep(2)
 
 # Compacta arquivos ".bak" para "backup.zip"
@@ -29,4 +27,4 @@ for folder, subfolders, files in os.walk(f'{srcLojamix}'):
 filezip.close()
 
 # Apaga ZIPs antigos do diretório padrão moderniza
-subprocess.run(['forfiles', '-p', f'{srcLojamix}', '/M', '*.zip', '-d', f'-{diasBkpsModerniza}', '-c', 'cmd /c del /f /q @path'])
+subprocess.call(['forfiles', '-p', f'{srcLojamix}', '/M', '*.zip', '-d', f'-{diasBkpsModerniza}', '-c', 'cmd /c del /f /q @path'])
