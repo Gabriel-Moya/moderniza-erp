@@ -13,3 +13,10 @@ Para o cliente não ficar executando sempre que ligar o computador ou quando pre
 
 # Sincronização NF
 Query SQL para resolver problema de sincronização das NFC-e do PDV com o retaguarda, basta executar no banco do PDV e substituir os IDs para o ID da nota que deseja sincronizar, para usar mais de um ID separe-os por vírgula, lembrando que é possível copiar todos os IDs desejados diretamente do PDV selecionando através da coluna.
+
+------
+
+# Script instalação Moderniza
+
+Esse script tem como objetivo automatizar a instalação de todas as dependências do ERP Moderniza. <br>
+Para funcionar corretamente o nome dos executáveis deverão seguir exatamente como estão nomeados no script, se baixar da pasta compartilhada no google drive eles já estão nomeados corretamente, os runtimes do C++ são baixados do [TechPowerUp](https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/), então dependendo da versão o nome da pasta poderá sofrer alteração, para corrigir isso basta renomear a pasta ou então alterar a linha 29 do ```install-lojamix.bat``` que é a linha responsável por chamar o .bat que instala todos os runtimes.
