@@ -40,6 +40,16 @@ echo Installing .NET Framework 4.8
 echo.
 start /wait ndp48-x86-x64-allos-enu.exe /passive /norestart
 
+::====================INSTALL FOXIT====================
+cls
+echo.
+echo Lojamix Moderniza install by Gabriel-Moya
+echo https://github.com/Gabriel-Moya
+echo.
+echo Installing Foxit Reader PDF
+echo.
+start /wait Foxit_9.0-with-printer.exe /forceinstall AUTO_UPDATE="0" /passive /norestart
+
 ::====================INSTALL LOJAMIX====================
 if "%opcao%" == "1" goto op1
 if "%opcao%" == "2" goto op2
